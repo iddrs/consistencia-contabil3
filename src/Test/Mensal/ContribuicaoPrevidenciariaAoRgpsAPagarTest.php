@@ -18,8 +18,10 @@ class ContribuicaoPrevidenciariaAoRgpsAPagarTest extends TestBase {
         
         $direito[] = sprintf("SELECT SUM(VALOR_LIQUIDACAO)::DECIMAL FROM PAD.LIQUIDACAO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '31901302%');
         $direito[] = sprintf("SELECT SUM(VALOR_PAGAMENTO * -1)::DECIMAL FROM PAD.PAGAMENTO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '31901302%');
-        $direito[] = sprintf("SELECT SUM(VALOR_LIQUIDACAO)::DECIMAL FROM PAD.LIQUIDACAO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '339004718%');
-        $direito[] = sprintf("SELECT SUM(VALOR_PAGAMENTO * -1)::DECIMAL FROM PAD.PAGAMENTO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '339004720%');
+        $direito[] = sprintf("SELECT SUM(VALOR_LIQUIDACAO)::DECIMAL FROM PAD.LIQUIDACAO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '33904718%');
+        $direito[] = sprintf("SELECT SUM(VALOR_PAGAMENTO * -1)::DECIMAL FROM PAD.PAGAMENTO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '33904718%');
+        $direito[] = sprintf("SELECT SUM(VALOR_LIQUIDACAO)::DECIMAL FROM PAD.LIQUIDACAO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '33904720%');
+        $direito[] = sprintf("SELECT SUM(VALOR_PAGAMENTO * -1)::DECIMAL FROM PAD.PAGAMENTO WHERE REMESSA = %d AND ENTIDADE IN (%s) AND RUBRICA LIKE '%s'", $this->remessa, $this->entidadesIn, '33904720%');
         
         $this->execute($esquerdo, $direito);
     }
