@@ -15,6 +15,7 @@ $tester
         ->addTest(new \App\Test\Mensal\VpaVpdDuodecimoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DuodecimoRepasseTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DuodecimoDesincorporacaoTest($remessa, $entidades))
+        ->addTest(new App\Test\Mensal\SaldoPLIntraTest($remessa, $entidades))
 ;
 
 $tester->execute();
