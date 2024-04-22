@@ -16,6 +16,7 @@ $tester
         ->addTest(new \App\Test\Mensal\DuodecimoRepasseTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DuodecimoDesincorporacaoTest($remessa, $entidades))
         ->addTest(new App\Test\Mensal\SaldoPLIntraTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
 ;
 
 $tester->execute();

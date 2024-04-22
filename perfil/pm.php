@@ -214,6 +214,7 @@ $tester
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorExcessoArrecadacaoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorReaberturaTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorSuperavitTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
 ;
 
 $tester->execute();

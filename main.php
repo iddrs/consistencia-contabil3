@@ -45,11 +45,35 @@ do {
 
 echo PHP_EOL, '================================================================================', PHP_EOL, PHP_EOL;
 echo 'Selecione a competência:', PHP_EOL, PHP_EOL;
-echo 'Ano [AAAA]: ';
-$ano = (int) fgets(STDIN);
+$ano = false;
+do {
+    echo 'Ano [AAAA]: ';
+    $ano = (int) fgets(STDIN);
+    if(strlen($ano) !== 4) $ano = false;
+}while(!$ano);
 //$ano = 2024;
-echo 'Mês [1 ~ 12]: ';
-$mes = (int) fgets(STDIN);
+$mes = false;
+do{
+    echo 'Mês [1 ~ 12]: ';
+    $mes = (int) fgets(STDIN);
+    switch ($mes){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+            break;
+        default :
+            $mes = false;
+    }
+}while(!$mes);
 //$mes = '2';
 $remessa = (int) ($ano . str_pad($mes, 2, '0', STR_PAD_LEFT));
 

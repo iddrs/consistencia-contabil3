@@ -12,9 +12,9 @@ abstract class TestBase {
     private readonly string $testName;
     protected readonly int $remessa;
     private readonly array $entidades;
-    private array $valorDireito = [];
-    private array $valorEsquerdo = [];
-    private array $resumo = [];
+    protected array $valorDireito = [];
+    protected array $valorEsquerdo = [];
+    protected array $resumo = [];
     protected readonly string $entidadesIn;
 
 
