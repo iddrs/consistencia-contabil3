@@ -1,5 +1,7 @@
 <?php
 
+use App\Test\Mensal\CaracteristicaPeculiarReceitaFundebTest;
+
 $tester = new \App\Tester($remessa, $entidades);
 $tester->setIndexOfTest($teste);
 
@@ -17,6 +19,7 @@ $tester
         ->addTest(new \App\Test\Mensal\DuodecimoDesincorporacaoTest($remessa, $entidades))
         ->addTest(new App\Test\Mensal\SaldoPLIntraTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\CaracteristicaPeculiarReceitaFundebTest($remessa, $entidades))
 ;
 
 $tester->execute();
