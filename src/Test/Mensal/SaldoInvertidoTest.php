@@ -94,9 +94,9 @@ class SaldoInvertidoTest extends TestBase {
         if($this->resultDireito === false){
             trigger_error("Erro ao executar [$query]", E_USER_ERROR);
         }
-        $this->valorDireito[$query] = pg_num_rows($this->resultEsquerdo);
-        $this->resumo['valor_direito'] += pg_num_rows($this->resultEsquerdo);
-        $this->resumo['diferenca'] += pg_num_rows($this->resultEsquerdo);
+        $this->valorDireito[$query] = pg_num_rows($this->resultDireito);
+        $this->resumo['valor_direito'] += pg_num_rows($this->resultDireito);
+        $this->resumo['diferenca'] += pg_num_rows($this->resultDireito);
     }
     
     public function showResult(): void {
