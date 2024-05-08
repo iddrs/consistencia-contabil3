@@ -18,7 +18,7 @@ class DeducaoReceitaTest extends TestBase {
 
     public function run(): void {
         $sql = "SELECT NATUREZA_RECEITA,
-                        SUM(RECEITA_REALIZADA) AS ARRECADADO_LIQUIDO
+                        SUM(RECEITA_REALIZADA)::DECIMAL AS ARRECADADO_LIQUIDO
                 FROM PAD.BAL_REC
                 WHERE REMESSA = %d
                         AND ENTIDADE IN (%s)

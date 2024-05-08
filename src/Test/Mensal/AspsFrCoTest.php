@@ -14,7 +14,7 @@ class AspsFrCoTest extends TestBase {
 
     public function run(): void {
         $ano = (int) substr($this->remessa, 0, 4);
-        $sql = "SELECT SUM(VALOR_EMPENHO)
+        $sql = "SELECT SUM(VALOR_EMPENHO)::DECIMAL
         FROM PAD.EMPENHO
         WHERE REMESSA = %d
             AND ENTIDADE IN (%s)

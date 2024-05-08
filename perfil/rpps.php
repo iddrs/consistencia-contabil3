@@ -217,6 +217,9 @@ $tester
         ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberServidorTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberPatronalNormalTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberPatronalSuplementarTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\RecisoesTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\FeriasTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\OutrosAdiantamentosPessoalTest($remessa, $entidades))
 ;
 
 $tester->execute();

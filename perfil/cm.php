@@ -205,6 +205,9 @@ $tester
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorReaberturaTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorSuperavitTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\RecisoesTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\FeriasTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\OutrosAdiantamentosPessoalTest($remessa, $entidades))
 ;
 
 $tester->execute();
