@@ -19,7 +19,8 @@ class ConsorcioModalidadeCredorTest extends TestBase {
                 WHERE REMESSA = %d
                     AND ENTIDADE IN (%s)
                     AND ANO_EMPENHO = %d
-                    AND (RUBRICA NOT LIKE '__71%%' OR RUBRICA NOT LIKE '__93%%')
+                    AND RUBRICA NOT LIKE '__71%%'
+                    AND RUBRICA NOT LIKE '__93%%'
                     AND CREDOR IN (451, 912, 8283)";
         $esquerdo[] = sprintf($sql, $this->remessa, $this->entidadesIn, $ano);
                 
