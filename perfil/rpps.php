@@ -214,6 +214,9 @@ $tester
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorSuperavitTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DeducaoReceitaTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberServidorTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberPatronalNormalTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\ContribuicaoPrevidenciariaRppsAReceberPatronalSuplementarTest($remessa, $entidades))
 ;
 
 $tester->execute();
