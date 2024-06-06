@@ -35,6 +35,10 @@ class DdrUtilizadaTest extends TestBase {
         
         $sql = "SELECT SUM(SALDO_ATUAL)::DECIMAL FROM PAD.BAL_VER WHERE REMESSA = %d AND ENTIDADE IN (%s) AND CONTA_CONTABIL LIKE '%s' AND ESCRITURACAO LIKE 'S'";
         $direito[] = sprintf($sql, $this->remessa, $this->entidadesIn, '3511%');
+
+        // Necessário para considerar os estornos de extra-orçamentário.
+        $sql = "SELECT SUM(MOVIMENTO_DEVEDOR * -1)::DECIMAL FROM PAD.BAL_VER WHERE REMESSA = %d AND ENTIDADE IN (%s) AND CONTA_CONTABIL LIKE '%s' AND ESCRITURACAO LIKE 'S'";
+        $direito[] = sprintf($sql, $this->remessa, $this->entidadesIn, '82114020869%');
         
         $this->execute($esquerdo, $direito);
     }
