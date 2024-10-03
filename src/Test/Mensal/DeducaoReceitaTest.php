@@ -49,7 +49,8 @@ class DeducaoReceitaTest extends TestBase {
         echo 'RECEITAS COM DEDUÇÃO MAIOR DO QUE A ARRECADAÇÃO BRUTA:', PHP_EOL;
         echo '....................................................................................................', PHP_EOL;
         foreach (pg_fetch_all($this->resultEsquerdo, PGSQL_ASSOC) as $nro){
-            echo "\t->\t", $this->formataNRO($nro['NATUREZA_RECEITA']), PHP_EOL;
+            // echo "\t->\t", $this->formataNRO($nro['NATUREZA_RECEITA']), PHP_EOL;
+            echo "\t->\t", $this->formataNRO($nro['natureza_receita']), PHP_EOL;
         }
         echo '....................................................................................................', PHP_EOL;
         echo 'Total de receitas com dedução maior do que a arrecadação bruta: ', number_format($this->resumo['valor_esquerdo'], 0, ',', '.'), PHP_EOL;

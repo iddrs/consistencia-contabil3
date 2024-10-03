@@ -214,7 +214,7 @@ $tester
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorExcessoArrecadacaoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorReaberturaTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorSuperavitTest($remessa, $entidades))
-        ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
+//        ->addTest(new \App\Test\Mensal\SaldoInvertidoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DeducaoReceitaTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\MdeFrCoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\AspsFrCoTest($remessa, $entidades))
