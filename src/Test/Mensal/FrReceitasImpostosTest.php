@@ -21,6 +21,7 @@ class FrReceitasImpostosTest extends TestBase {
                     AND NATUREZA_RECEITA NOT LIKE '1711%%'
                     AND NATUREZA_RECEITA NOT LIKE '1721%%'
                     AND NATUREZA_RECEITA NOT LIKE '1321%%'
+                    AND NATUREZA_RECEITA NOT LIKE '1729530101%%'
                     AND TIPO_NIVEL_RECEITA LIKE 'A'
                     AND FONTE_RECURSO IN (500, 502)";
         $esquerdo[] = sprintf($sql, $this->remessa, $this->entidadesIn);

@@ -28,6 +28,7 @@ class CaracteristicaPeculiarReceitaFundebTest extends TestBase {
                     AND NATUREZA_RECEITA not like '17115201%%'
                     AND NATUREZA_RECEITA not like '17215001%%'
                     AND NATUREZA_RECEITA not like '17215101%%'
+                    AND NATUREZA_RECEITA not like '1729530101%%'
                     AND NATUREZA_RECEITA not like '17215201%%'"
         ;
         $query = sprintf($sql, $this->remessa, $this->entidadesIn);
@@ -53,7 +54,7 @@ class CaracteristicaPeculiarReceitaFundebTest extends TestBase {
         echo 'RECEITAS COM CP DO FUNDEB INDEVIDA:', PHP_EOL;
         echo '....................................................................................................', PHP_EOL;
         foreach (pg_fetch_all($this->resultEsquerdo, PGSQL_ASSOC) as $nro){
-            echo "\t->\t", $this->formataNRO($nro['NATUREZA_RECEITA']), PHP_EOL;
+            echo "\t->\t", $this->formataNRO($nro['natureza_receita']), PHP_EOL;
         }
         echo '....................................................................................................', PHP_EOL;
         echo 'Total das receitas com CP do Fundeb Indevida: ', number_format($this->resumo['valor_esquerdo'], 0, ',', '.'), PHP_EOL;
