@@ -17,7 +17,7 @@ class AtivoPassivoDuodecimoTest extends TestBase {
         
         $esquerdo[] = sprintf($sql, $this->remessa, 'cm', '113829901%');
                 
-        $direito[] = sprintf($sql, $this->remessa, 'pm', '2189202%');
+        $direito[] = sprintf($sql, $this->remessa, 'pm', '218929801%');
                 
         $this->execute($esquerdo, $direito);
     }

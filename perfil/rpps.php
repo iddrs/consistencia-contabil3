@@ -220,6 +220,8 @@ $tester
         ->addTest(new \App\Test\Mensal\RecisoesTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\FeriasTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\OutrosAdiantamentosPessoalTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\FechamentoControle990001Test($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\FechamentoControle990002Test($remessa, $entidades))
 ;
 
 $tester->execute();
