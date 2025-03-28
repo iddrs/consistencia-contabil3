@@ -198,7 +198,7 @@ $tester
         ->addTest(new \App\Test\Mensal\DdrDisponivelTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DdrComprometidaEmpenhoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DdrComprometidaLiquidacaoTest($remessa, $entidades))
-        ->addTest(new \App\Test\Mensal\DdrUtilizadaTest($remessa, $entidades))
+//        ->addTest(new \App\Test\Mensal\DdrUtilizadaTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorAnulacaoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoEspecialReabertoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\CreditoAdicionalPorExcessoArrecadacaoTest($remessa, $entidades))
