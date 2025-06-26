@@ -204,7 +204,8 @@ $tester
         ->addTest(new \App\Test\Mensal\DisponibilidadesTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\ResultadoFinanceiroTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\ResultadoPeriodoTest($remessa, $entidades))
-        ->addTest(new \App\Test\Mensal\SituacaoFinanceiraOrcamentariaTest($remessa, $entidades))
+//        ->addTest(new \App\Test\Mensal\SituacaoFinanceiraOrcamentariaTest($remessa, $entidades))
+        ->addTest(new \App\Test\Mensal\SituacaoFinanceiraOrcamentariaPmTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DdrDisponivelTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DdrComprometidaEmpenhoTest($remessa, $entidades))
         ->addTest(new \App\Test\Mensal\DdrComprometidaLiquidacaoTest($remessa, $entidades))
@@ -229,6 +230,7 @@ $tester
         ->addTest(new App\Test\Mensal\BensMoveisAClassificarTest($remessa, $entidades))
         ->addTest(new App\Test\Mensal\FechamentoControle990001Test($remessa, $entidades))
         ->addTest(new App\Test\Mensal\FechamentoControle990002Test($remessa, $entidades))
+        ->addTest(new App\Test\Mensal\DeducaoFundebVpdTest($remessa, $entidades))
 ;
 
 $tester->execute();
